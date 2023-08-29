@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".BasicCalculatorActivity"
+    android:background="@drawable/gradient_background">
+
+    <Button
+        android:id="@+id/historyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_coloured_button"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/white"
+        android:onClick="openHistory"
+        android:text="History" />
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="0"
+        android:layout_marginTop="180dp"
+        android:textSize="32sp"
+        android:textAlignment="textEnd" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/resultTextView"
+        android:layout_marginTop="16dp"
+        android:columnCount="4"
+        android:rowCount="5"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_coloured_button"
+            android:textSize="25sp"
+            android:onClick="onDigitClick"
+            android:text="7" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_coloured_button"
+            android:layout_margin="4dp"
+            android:onClick="onDigitClick"
+            android:text="8" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_coloured_button"
+            android:onClick="onDigitClick"
+            android:text="9" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_coloured_button"
+            android:layout_margin="4dp"
+            android:onClick="onOperatorClick"
+            android:textSize="25sp"
+            android:text="+" />
+
+        <!-- Row 2 -->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_coloured_button"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:onClick="onDigitClick"
+            android:text="4" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_coloured_button"
+            android:textSize="25sp"
+            android:onClick="onDigitClick"
+            android:text="5" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:background="@drawable/rounded_coloured_button"
+            android:onClick="onDigitClick"
+            android:text="6" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_coloured_button"
+            android:onClick="onOperatorClick"
+            android:text="-" />
+
+        <!-- Row 3 -->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_coloured_button"
+            android:layout_margin="4dp"
+            android:onClick="onDigitClick"
+            android:text="1" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_coloured_button"
+            android:onClick="onDigitClick"
+            android:text="2" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:background="@drawable/rounded_coloured_button"
+            android:textSize="25sp"
+            android:layout_margin="4dp"
+            android:textColor="@color/white"
+            android:onClick="onDigitClick"
+            android:text="3" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:textSize="25sp"
+            android:layout_columnWeight="1"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_coloured_button"
+            android:layout_margin="4dp"
+            android:onClick="onOperatorClick"
+            android:text="*" />
+
+        <!-- Row 4 -->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_coloured_button"
+            android:onClick="onDigitClick"
+            android:text="0" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:background="@drawable/rounded_coloured_button"
+            android:onClick="onClearClick"
+            android:text="AC" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:background="@drawable/rounded_coloured_button"
+            android:layout_margin="4dp"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:onClick="onOperatorClick"
+            android:text="/" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_coloured_button"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:onClick="onEqualClick"
+            android:text="=" />
+
+    </GridLayout>
+
+</RelativeLayout>
